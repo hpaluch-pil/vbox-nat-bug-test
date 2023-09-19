@@ -1,0 +1,5 @@
+# ignore Vim files
+*~
+*.swp
+*.tmp
+*.bak
