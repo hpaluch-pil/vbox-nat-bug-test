@@ -1,0 +1,13 @@
+--- VirtualBox-7.0.10-orig/src/VBox/Devices/Network/slirp/slirp.c	2023-07-12 18:34:47.000000000 +0200
++++ VirtualBox-7.0.10/src/VBox/Devices/Network/slirp/slirp.c	2023-09-19 09:52:49.275859400 +0200
+@@ -1118,8 +1118,8 @@
+          * Check for FD_CLOSE events.
+          * in some cases once FD_CLOSE engaged on socket it could be flashed latter (for some reasons)
+          */
+-        if (   CHECK_FD_SET(so, NetworkEvents, closefds)
+-            || (so->so_close == 1))
++        if ((so->so_state) && (CHECK_FD_SET(so, NetworkEvents, closefds)
++            || (so->so_close == 1)))
+         {
+             /*
+              * drain the socket
