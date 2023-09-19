@@ -60,7 +60,8 @@ while($i<$Iterations){
 	print "  Data OK.\n";
 	print "  Closing connection...\n";
 	$client->close();
-	sleep 1;
+	# from: https://stackoverflow.com/a/896928
+	select(undef, undef, undef,0.01);
 }
 
 print "OK: Exiting after $i iterations...\n";
