@@ -40,6 +40,13 @@ close until socket data are properly processed as Established.
 
 # Fix
 
-experimental patch is under [vbox-patches/close-fix-slirp.c.patch](vbox-patches/close-fix-slirp.c.patch])
+Experimental patch is under [vbox-patches/close-fix-slirp.c.patch](vbox-patches/close-fix-slirp.c.patch])
 
+# Resources
 
+Reported here: https://www.virtualbox.org/ticket/21850
+
+Provided PERL scripts based on various Internet resources, including:
+- https://dev.to/thibaultduponchelle/perl-tcp-clientserver-sample-code-4pnm
+- https://perldoc.perl.org/IO::Socket::INET
+- https://stackoverflow.com/questions/66291247/how-can-i-translate-non-printable-ascii-chars-to-readable-text-with-perl
